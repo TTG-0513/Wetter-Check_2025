@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:wetter_check_2025/main.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
@@ -12,6 +11,7 @@ class WetterCheck extends StatefulWidget {
 
 class _WetterCheckState extends State<WetterCheck> {
   String klima = "Temperatur wird gelesen";
+  String klima2 = "Temperatur wird gelesen";
 
   @override
   void initState() {
@@ -27,6 +27,7 @@ class _WetterCheckState extends State<WetterCheck> {
 
     setState(() {
       klima = "${data["current"]["temperature_2m"]}";
+      klima2 = "${data["current"]["apparent_temperature"]}";
     });
   }
 
@@ -42,7 +43,35 @@ class _WetterCheckState extends State<WetterCheck> {
           ],
         ),
         body: Center(
-          child: Text('Aktuell ist die Temperatur in Gettorf $klima'),
+          child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                SizedBox(
+                  height: 300,
+                  width: 300,
+                  child: Image.network(
+                      "https://images.unsplash.com/photo-1730371339286-76d0cd5d1f6f?q=80&w=1635&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"),
+                ),
+                Container(
+                    height: 20,
+                    width: 300,
+                    color: Color.fromARGB(255, 11, 166, 228),
+                    child: Text(
+                      'Aktuell ist die Temperatur in Gettorf $klima',
+                      style:
+                          TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+                    )),
+                Container(
+                    height: 20,
+                    width: 300,
+                    color: Color.fromARGB(255, 14, 223, 181),
+                    child: Text(
+                      'Aktuell gefühlte Temperatur $klima2',
+                      style:
+                          TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+                    )),
+              ]),
         ),
       ),
     );
