@@ -67,7 +67,7 @@ class _WetterCheckState extends State<WetterCheck> {
                     width: 300,
                     color: Color.fromARGB(255, 14, 223, 181),
                     child: Text(
-                      'Aktuell gefühlte Temperatur $klima2',
+                      'Aktuelle gefühlte Temperatur $klima2',
                       style:
                           TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
                     )),
