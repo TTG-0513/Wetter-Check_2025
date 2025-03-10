@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
-import 'package:wetter_check_2025/backgrund_wetter_app.dart';
 
 class WetterCheck extends StatefulWidget {
   const WetterCheck({super.key});
