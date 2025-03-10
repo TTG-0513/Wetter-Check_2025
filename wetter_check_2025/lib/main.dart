@@ -2,5 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:wetter_check_2025/wetter_check.dart';
 
 void main() {
-  runApp(WetterCheck());
+  runApp(MaterialApp(
+    home: WetterCheck(),
+  ));
 }
