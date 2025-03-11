@@ -13,7 +13,7 @@ class Backgrund extends StatelessWidget {
       decoration: BoxDecoration(
         image: DecorationImage(
           fit: BoxFit.fill,
-          image: AssetImage("assets/Image/BackgrundWetterApp.png"),
+          image: AssetImage("assets/image/Backgrund Wetter.png"),
         ),
       ),
       height: double.infinity,
