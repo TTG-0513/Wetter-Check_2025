@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:wetter_check_2025/wetter_check.dart';
+import 'package:wetter_check_2025/screens/wetter_gettorf.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: WetterCheck(),
+    home: WetterGettorf(),
   ));
 }
