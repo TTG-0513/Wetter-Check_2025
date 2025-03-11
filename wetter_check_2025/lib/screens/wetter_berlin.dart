@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
-import 'package:wetter_check_2025/screens/wetter_gettorf.dart';
-import 'package:wetter_check_2025/screens/wetter_kiel.dart';
-import 'package:wetter_check_2025/screens/wetter_leipzig.dart';
+import 'package:wetter_check_2025/widgets/button_line4.dart';
 
 class WetterBerlin extends StatefulWidget {
   const WetterBerlin({super.key});
@@ -70,7 +68,7 @@ class _WetterCheckState extends State<WetterBerlin> {
                   Container(
                       height: 20,
                       width: 300,
-                      color: Color.fromARGB(255, 11, 166, 228),
+                      color: Color.fromARGB(255, 214, 35, 74),
                       child: Text(
                         'Aktuell ist die Temperatur $klima',
                         style: TextStyle(
@@ -79,7 +77,7 @@ class _WetterCheckState extends State<WetterBerlin> {
                   Container(
                       height: 20,
                       width: 300,
-                      color: Color.fromARGB(255, 14, 223, 181),
+                      color: Color.fromARGB(255, 206, 156, 50),
                       child: Text(
                         'Aktuelle gefühlte Temperatur $klima2',
                         style: TextStyle(
@@ -88,7 +86,7 @@ class _WetterCheckState extends State<WetterBerlin> {
                   Container(
                       height: 20,
                       width: 300,
-                      color: Color.fromARGB(255, 14, 223, 181),
+                      color: Color.fromARGB(255, 212, 212, 27),
                       child: Text(
                         'Das Wetter ist heute bewölkt zu $klima3',
                         style: TextStyle(
@@ -97,7 +95,7 @@ class _WetterCheckState extends State<WetterBerlin> {
                   Container(
                       height: 20,
                       width: 300,
-                      color: Color.fromARGB(255, 14, 223, 181),
+                      color: Color.fromARGB(255, 123, 218, 121),
                       child: Text(
                         'Luftfeuchtigkeit $klima4',
                         style: TextStyle(
@@ -106,52 +104,13 @@ class _WetterCheckState extends State<WetterBerlin> {
                   Container(
                       height: 20,
                       width: 300,
-                      color: Color.fromARGB(255, 14, 223, 181),
+                      color: Color.fromARGB(255, 86, 124, 221),
                       child: Text(
                         'Die Windgeschwindigkeit ist grade $klima5',
                         style: TextStyle(
                             fontSize: 12, fontWeight: FontWeight.bold),
                       )),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Text("Gettorf"),
-                      IconButton(
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => WetterGettorf(),
-                              ),
-                            );
-                          },
-                          icon:
-                              Icon(Icons.keyboard_double_arrow_left_outlined)),
-                      Text("Leipzig"),
-                      IconButton(
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => WetterLeipzig(),
-                              ),
-                            );
-                          },
-                          icon: Icon(Icons.arrow_circle_left)),
-                      Text("Kiel"),
-                      IconButton(
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => WetterKiel(),
-                              ),
-                            );
-                          },
-                          icon: Icon(Icons.arrow_circle_left_outlined)),
-                    ],
-                  )
+                  ButtonLine4()
                 ]),
           ),
         ],
